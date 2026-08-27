@@ -4,3 +4,6 @@ android/.gradle/
 android/build/
 android/local.properties
 android/.idea/
+android/captures/
+android/app/release/
+*.log
