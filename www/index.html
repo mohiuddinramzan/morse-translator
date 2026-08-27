@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morse Code Translator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>Morse Translator</h1>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="convert">Convert</button>
+    <button class="tab-btn" data-tab="sound">Sound</button>
+    <button class="tab-btn" data-tab="flash">Flashlight</button>
+  </nav>
+
+  <section id="convert" class="tab-content active">
+    <label>English Text</label>
+    <textarea id="textInput" placeholder="Type text here..."></textarea>
+    <div class="swap-icon">⇅</div>
+    <label>Morse Code</label>
+    <textarea id="morseInput" placeholder="Type morse here (use . and - , space between letters, / between words)"></textarea>
+    <button id="clearBtn" class="secondary-btn">Clear</button>
+  </section>
+
+  <section id="sound" class="tab-content">
+    <label>Text to play as sound</label>
+    <textarea id="soundText" placeholder="Type text here..."></textarea>
+    <div class="control-row">
+      <label>Speed (WPM): <span id="wpmValSound">15</span></label>
+      <input type="range" id="wpmSound" min="5" max="30" value="15">
+    </div>
+    <div class="btn-row">
+      <button id="playSoundBtn">▶ Play</button>
+      <button id="stopSoundBtn" class="secondary-btn">■ Stop</button>
+    </div>
+    <div id="morsePreviewSound" class="morse-preview"></div>
+  </section>
+
+  <section id="flash" class="tab-content">
+    <label>Text to flash</label>
+    <textarea id="flashText" placeholder="Type text here..."></textarea>
+    <div class="control-row">
+      <label>Speed (WPM): <span id="wpmValFlash">10</span></label>
+      <input type="range" id="wpmFlash" min="5" max="30" value="10">
+    </div>
+    <div class="btn-row">
+      <button id="playFlashBtn">🔦 Start</button>
+      <button id="stopFlashBtn" class="secondary-btn">■ Stop</button>
+    </div>
+    <div id="flashOverlay"></div>
+    <p class="hint" id="flashHint"></p>
+  </section>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "morse-translator",
+  "version": "1.0.0",
+  "description": "Morse code translator app with sound and flashlight, built with Capacitor",
+  "scripts": {
+    "sync": "cap sync android"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
